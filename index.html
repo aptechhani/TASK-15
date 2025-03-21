@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App with Timer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Welcome Screen -->
+    <div id="welcome-screen">
+      
+        <button id="dark-mode-toggle">🌙 Toggle Dark Mode</button>
+        <h1>Welcome to the Quiz</h1>
+        <p>✔ Answer multiple-choice questions</p>
+        <p>✔ 60 seconds per question</p>
+        <p>✔ Score will be calculated at the end</p>
+        <p>✔ Navigate through Previous and Next buttons</p>
+        <p>✔ Use lifelines like 50/50, Skip, or Extra Time </p>
+        <p>  ✔ Get instant feedback on correct/wrong answers</p>
+        <p>  ✔ View a summary of your performance after the quiz </p>
+            <p>  ✔ Restart the quiz anytime to improve your score</p>
+            <p> ✔ Responsive design for mobile and desktop users</p>
+        <button id="start-btn" style="background-color: rgb(207, 145, 155) ; color: black;">Start Quiz</button>
+    </div>
+
+    <!-- Quiz Container (Initially Hidden) -->
+    <div class="quiz-container" id="quiz-container" style="display: none;">
+        <h1>Quiz App</h1>
+        <div class="progress-bar-container">
+            <div id="progress-bar"></div>
+        </div>
+        <h2 id="progress">Question 1 out of 5</h2>
+        <p id="question"></p>
+        <div id="options"></div>
+        <p id="timer">Time Left: 60s</p>
+        
+        <!-- Lifeline Buttons -->
+        <button id="lifeline-5050" >50/50</button>
+        <button id="lifeline-skip">Skip Question</button>
+        <button id="lifeline-extra-time">Extra Time +10s</button>
+    
+        <br>
+    
+        <button id="prev-btn">Previous</button>
+        <button id="next-btn">Next</button>
+        <button id="submit-btn" style="display: none;">Submit</button>
+        <div id="result-container"></div>
+
+
+
+
+
+   <script src="script.js"></script>
+</body>
+</html>
