@@ -1,0 +1,329 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+   background: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Puri screen ke barabar height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Scroll bar ko remove karega */
+        box-sizing: border-box;
+    
+    
+}
+
+.quiz-container {
+    width: 400px;
+    max-height: 90vh; /* Maximum height set karega */
+    overflow-y: auto; /* Zarurat par scroll ho, warna nahi */
+    background-color: rgb(245, 236, 238);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px gray;
+    color: #1e1e1e;
+   
+}
+h1 {
+    font-size: 40px; /* Font size bara kar diya */
+    font-weight: bold; /* Text bold kar diya */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Shadow add ki */
+    text-align: center; /* Center align kar diya */
+    color: #333; /* Dark gray color */
+}
+
+#question {
+    font-size: 18px; 
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5px;
+    color: #333;
+    max-width: 100%;  /* Screen ke size ke mutabiq width adjust karega */
+    overflow-wrap: break-word; /* Lambay words ko break karne ke liye */
+    white-space: normal; /* Agar text wrap nahi ho raha toh isko enable karein */
+    margin: 0 auto; /* Center align karne ke liye */
+}
+
+
+#timer {
+    font-size: 18px;
+    color: red;
+    font-weight: bold;
+}
+.option {
+    display: block;
+    padding: 12px;
+    margin: 5px 0;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.option:hover {
+    background-color: #3498db;
+    color: white;
+    transform: scale(1.1); /* Bara hone ka effect */
+}
+
+#options button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    background:rgb(180, 100, 120);;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#options button:hover {
+    background: #e0cacf;
+}
+
+.btn-group {
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+ 
+
+}
+
+#result-container {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+/* Progress Bar Container */
+.progress-container {
+    width: 100%;
+    background: #ddd;
+    height: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+/* Progress Bar */
+#progress-bar {
+    height: 100%;
+    width: 0%;
+    background: #3498db;
+    transition: width 0.5s ease-in-out;
+}
+/* Welcome Screen */
+#welcome-screen {
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px;
+    width: 50%;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#welcome-screen h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+#welcome-screen p {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+}
+
+#start-btn {
+    padding: 10px 24px;
+    font-size: 20px;
+    font-weight: bold;
+    background: rgb(207, 145, 155);
+    color: black;
+    border: 2px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 27px rgba(207, 145, 155, 0.5);
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+
+}
+
+/* Hover Effect */
+#start-btn:hover {
+    background: white;
+    color: rgb(180, 100, 120);
+    transform: scale(1.1);
+    box-shadow: 0px 6px 15px rgba(180, 100, 120, 0.7);
+}
+
+/* Pulsating Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0px 4px 10px rgba(207, 145, 155, 0.5);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0px 6px 15px rgba(207, 145, 155, 0.7);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0px 4px 10px rgba(207, 145, 155, 0.5);
+    }
+}
+
+/* Apply Animation */
+#start-btn {
+    animation: pulse 1.5s infinite;
+}
+
+
+
+#progress {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+#prev-btn
+{
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+.dark-mode {
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+}
+
+button {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.dark-mode button {
+    background: #444;
+    color: #fff;
+}
+
+.dark-mode button:hover {
+    background: #666;
+}  
+
+
+#welcome-screen h1 {
+    font-size: 3.5vw;
+    font-weight: 900;
+    font-family: sans-serif;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4); /* Shadow Effect */
+}
+button {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 6px 20px;
+
+    border: 2px solid #333; /* 2px solid border */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+#lifeline-5050 {
+    background-color: #ffcc00;
+    color: #333;
+}
+
+#lifeline-skip {
+    background-color: #ff6666;
+    color: rgb(0, 0, 0);
+}
+
+#lifeline-extra-time {
+    background-color: #66cc66;
+    color: rgb(0, 0, 0);
+}
+
+/* Hover Effects */
+button:hover {
+    transform: scale(1.05); /* Slightly increase size on hover */
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: scale(0.95); /* Button press effect */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.progress-bar-container {
+    width: 100%;
+    height: 10px;
+    background: #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin:  auto;
+}
+
+/* Progress Bar */
+#progress-bar {
+    height: 100%;
+    width: 0%;
+    background: green;
+    transition: width 0.4s ease-in-out;
+}
+
+/* Button */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+button:hover {
+    background: #2980b9;
+}
